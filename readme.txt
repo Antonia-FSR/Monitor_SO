@@ -1,11 +1,5 @@
 Tarea 2 - Sistemas Operativos 2026: Lectores y escritores
 
-Integrantes:
-- (nombre) - R1, R2, E1, E2, Makefile
-- (nombre) - R3, R4, traza (R6)
-- (nombre) - R5, verificador (R6)
-- (nombre) - R8, R9, R10
-
 Compilar:
     make            # genera ./rw
     make tsan       # versión con ThreadSanitizer (./rw_tsan)
