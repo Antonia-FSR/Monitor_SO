@@ -119,11 +119,8 @@ int main(int argc, char* argv[]) {
     Registro registro;
     std::unique_ptr<ControlRW> control;
     if (modo == "cond") {
-        control = std::make_unique<MonitorRW>(politica);
-        // NOTA PARA R6 / E2 (notraza):
-        // Si agregan en MonitorRW un metodo o parametro opcional para desactivar el guardado
-        // de la traza en memoria (ej. mon->desactivar_traza() o MonitorRW(politica, !sin_traza)),
-        // conectarlo aqui para evitar guardar anotaciones durante E2 (K=10000).
+        control = std::make_unique<MonitorRW>(politica, !sin_traza);
+
     } else {
         control = std::make_unique<ControlAtomicoRW>();
     }
